@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/lights">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LIGHTS"
+        android:textSize="40dp"
+        android:background="@android:color/transparent"
+        android:textColor="#94CFE8"
+        android:fontFamily="monospace"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="190dp"
+        android:layout_height="174dp"
+        android:background="@android:color/transparent"
+        android:text="KITCHEN          TURN ON"
+        android:id="@+id/btnKitchen"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="61dp" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="174dp"
+        android:background="@android:color/transparent"
+        android:text="DINING ROOM   TURN ON"
+        android:id="@+id/btnDining"
+        android:layout_alignTop="@+id/btnKitchen"
+        android:layout_marginLeft="230dp"
+        />
+
+    <Button
+        android:layout_width="211dp"
+        android:layout_height="250dp"
+        android:background="@android:color/transparent"
+        android:text="BED ROOM       TURN ON"
+        android:id="@+id/btnBed"
+        android:layout_alignTop="@+id/btnDining"
+        android:layout_marginLeft="433dp" />
+
+    <Button
+        android:layout_width="190dp"
+        android:layout_height="74dp"
+        android:background="@android:color/transparent"
+        android:text="BATHROOM     TURN ON"
+        android:id="@+id/btnBath"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="29dp"
+        android:layout_marginLeft="38dp"
+        />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="74dp"
+        android:background="@android:color/transparent"
+        android:text="KORRIDOR     TURN ON"
+        android:id="@+id/btnKor"
+        android:layout_alignTop="@+id/btnBath"
+        android:layout_marginLeft="230dp"
+
+        />
+
+</RelativeLayout>
