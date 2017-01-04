@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:text="Progress: 0/10"
         android:textSize="24sp"
-        android:textColor="#94CFE8"
-        android:layout_above="@+id/seekBar"
+        android:textColor="#1B7ECA"
+        android:layout_above="@+id/seekBarSofa"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
