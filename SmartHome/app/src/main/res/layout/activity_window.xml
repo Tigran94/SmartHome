@@ -77,4 +77,55 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="7dp"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OPEN"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/checkBox2"
+        android:layout_marginStart="43dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OPEN"
+        android:id="@+id/textView4"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_marginStart="157dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OPEN"
+        android:layout_marginTop="231dp"
+        android:id="@+id/textView5"
+        android:layout_toEndOf="@+id/checkBox3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OPEN"
+        android:id="@+id/textView6"
+        android:layout_marginTop="178dp"
+        android:layout_toStartOf="@+id/checkBox5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OPEN"
+        android:id="@+id/textView7"
+        android:layout_marginBottom="111dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OPEN"
+        android:id="@+id/textView8"
+        android:layout_marginBottom="181dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/textView6" />
+
 </RelativeLayout>
