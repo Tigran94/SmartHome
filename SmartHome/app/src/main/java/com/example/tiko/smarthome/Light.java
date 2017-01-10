@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+
 public class Light extends AppCompatActivity implements View.OnClickListener {
 
     Button btnKitchen,btnDining,btnBed,btnBath,btnKor;
-    boolean kitchen=true,dining=true,bed=true,bath=true,kor=true;
+    boolean kitchen=true,dining=true,bed=true,bath=true,kor=true,x;
+    private static final String KEY_COUNT = "COUNT";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,18 @@ public class Light extends AppCompatActivity implements View.OnClickListener {
         btnBed.setOnClickListener(this);
         btnBath.setOnClickListener(this);
         btnKor.setOnClickListener(this);
+        if(savedInstanceState!=null){
+            kitchen=savedInstanceState.getBoolean(KEY_COUNT,kitchen);
+            if(kitchen==false){
+            btnKitchen.setBackgroundColor(Color.parseColor("#FBFF5E"));
+            btnKitchen.setText("KITCHEN          TURN OFF");}
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putBoolean(KEY_COUNT,kitchen);
+        super.onSaveInstanceState(outState);
     }
 
     @Override
@@ -33,6 +47,7 @@ public class Light extends AppCompatActivity implements View.OnClickListener {
 
         switch (v.getId()) {
             case R.id.btnKitchen:
+
                 if (kitchen) {
                     btnKitchen.setBackgroundColor(Color.parseColor("#FBFF5E"));
                     btnKitchen.setText("KITCHEN          TURN OFF");
