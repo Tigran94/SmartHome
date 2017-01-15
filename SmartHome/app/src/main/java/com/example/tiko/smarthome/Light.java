@@ -10,8 +10,7 @@ import android.widget.Button;
 public class Light extends AppCompatActivity implements View.OnClickListener {
 
     Button btnKitchen,btnDining,btnBed,btnBath,btnKor;
-    boolean kitchen=true,dining=true,bed=true,bath=true,kor=true,x;
-    private static final String KEY_COUNT = "COUNT";
+    boolean kitchen=true,dining=true,bed=true,bath=true,kor=true,x=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,16 +28,40 @@ public class Light extends AppCompatActivity implements View.OnClickListener {
         btnBath.setOnClickListener(this);
         btnKor.setOnClickListener(this);
         if(savedInstanceState!=null){
-            kitchen=savedInstanceState.getBoolean(KEY_COUNT,kitchen);
+            kitchen=savedInstanceState.getBoolean("kitchen",kitchen);
+            dining=savedInstanceState.getBoolean("dining",dining);
+            bed=savedInstanceState.getBoolean("bed",bed);
+            bath=savedInstanceState.getBoolean("bath",bath);
+            kor=savedInstanceState.getBoolean("kor",kor);
+            if(kor==false){
+                btnKor.setBackgroundColor(Color.parseColor("#FBFF5E"));
+                btnKor.setText("KORRIDOR                        TURN OFF");
+            }
+            if(bath==false){
+                btnBath.setBackgroundColor(Color.parseColor("#FBFF5E"));
+                btnBath.setText("BATHROOM                        TURN OFF");
+            }
+            if(bed==false){
+                btnBed.setBackgroundColor(Color.parseColor("#FBFF5E"));
+                btnBed.setText("BED ROOM                          TURN OFF");
+            }
             if(kitchen==false){
-            btnKitchen.setBackgroundColor(Color.parseColor("#FBFF5E"));
-            btnKitchen.setText("KITCHEN          TURN OFF");}
+                  btnKitchen.setBackgroundColor(Color.parseColor("#FBFF5E"));
+                  btnKitchen.setText("KITCHEN                        TURN OFF");
+            }
+            if(dining==false){
+                btnDining.setBackgroundColor(Color.parseColor("#FBFF5E"));
+                btnDining.setText("DINING ROOM                     TURN OFF");
+            }
         }
     }
-
     @Override
     public void onSaveInstanceState(Bundle outState) {
-        outState.putBoolean(KEY_COUNT,kitchen);
+        outState.putBoolean("kitchen",kitchen);
+        outState.putBoolean("dining",dining);
+        outState.putBoolean("bed",bed);
+        outState.putBoolean("bath",bath);
+        outState.putBoolean("kor",kor);
         super.onSaveInstanceState(outState);
     }
 
@@ -50,60 +73,60 @@ public class Light extends AppCompatActivity implements View.OnClickListener {
 
                 if (kitchen) {
                     btnKitchen.setBackgroundColor(Color.parseColor("#FBFF5E"));
-                    btnKitchen.setText("KITCHEN          TURN OFF");
+                    btnKitchen.setText("KITCHEN                        TURN OFF");
                     kitchen=false;
                 }
                 else {
                     btnKitchen.setBackgroundColor(Color.TRANSPARENT);
-                    btnKitchen.setText("KITCHEN          TURN ON");
+                    btnKitchen.setText("KITCHEN                        TURN ON");
                     kitchen=true;
                 }
                 break;
             case R.id.btnDining:
                 if (dining) {
                     btnDining.setBackgroundColor(Color.parseColor("#FBFF5E"));
-                    btnDining.setText("DINING ROOM   TURN OFF");
+                    btnDining.setText("DINING ROOM                     TURN OFF");
                     dining=false;
                 }
                 else {
                     btnDining.setBackgroundColor(Color.TRANSPARENT);
-                    btnDining.setText("DINING ROOM   TURN ON");
+                    btnDining.setText("DINING ROOM                     TURN ON");
                     dining=true;
                 }
                 break;
             case R.id.btnBed:
                 if (bed) {
                     btnBed.setBackgroundColor(Color.parseColor("#FBFF5E"));
-                    btnBed.setText("BED ROOM       TURN OFF");
+                    btnBed.setText("BED ROOM                          TURN OFF");
                     bed=false;
                 }
                 else {
                     btnBed.setBackgroundColor(Color.TRANSPARENT);
-                    btnBed.setText("BED ROOM       TURN ON");
+                    btnBed.setText("BED ROOM                          TURN ON");
                     bed=true;
                 }
                 break;
             case R.id.btnBath:
                 if (bath) {
                     btnBath.setBackgroundColor(Color.parseColor("#FBFF5E"));
-                    btnBath.setText("BATHROOM     TURN OFF");
+                    btnBath.setText("BATHROOM                        TURN OFF");
                     bath=false;
                 }
                 else {
                     btnBath.setBackgroundColor(Color.TRANSPARENT);
-                    btnBath.setText("BATHROOM     TURN ON");
+                    btnBath.setText("BATHROOM                        TURN ON");
                     bath=true;
                 }
                 break;
             case R.id.btnKor:
                 if (kor) {
                     btnKor.setBackgroundColor(Color.parseColor("#FBFF5E"));
-                    btnKor.setText("KORRIDOR     TURN OFF");
+                    btnKor.setText("KORRIDOR                        TURN OFF");
                     kor=false;
                 }
                 else {
                     btnKor.setBackgroundColor(Color.TRANSPARENT);
-                    btnKor.setText("KORRIDOR     TURN ON");
+                    btnKor.setText("KORRIDOR                        TURN ON");
                     kor=true;
                 }
                 break;
