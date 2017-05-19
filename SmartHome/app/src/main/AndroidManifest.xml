@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tiko.smarthome"
     >
-
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/sh_emblem"
@@ -17,7 +18,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".Light"
-            android:label="Light"/>
+            android:label="Light">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <data android:mimeType="text/plain"></data>
+            </intent-filter>
+        </activity>
         <activity android:name=".Window"
             android:label="Window"/>
         <activity android:name=".Curtain"

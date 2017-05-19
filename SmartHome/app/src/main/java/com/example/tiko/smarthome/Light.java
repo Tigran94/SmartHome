@@ -1,5 +1,6 @@
 package com.example.tiko.smarthome;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,10 +8,11 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class Light extends AppCompatActivity implements View.OnClickListener {
 
+public class Light extends AppCompatActivity implements View.OnClickListener {
     Button btnKitchen,btnDining,btnBed,btnBath,btnKor;
     boolean kitchen=true,dining=true,bed=true,bath=true,kor=true,x=true;
+    MyTask mt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,21 +66,32 @@ public class Light extends AppCompatActivity implements View.OnClickListener {
         outState.putBoolean("kor",kor);
         super.onSaveInstanceState(outState);
     }
-
     @Override
     public void onClick(View v) {
-
         switch (v.getId()) {
             case R.id.btnKitchen:
-
                 if (kitchen) {
+                    try {
+                        Intent intent = getIntent();
+                        String ip = intent.getStringExtra("ip");
+                        String port = intent.getStringExtra("port");
+                        mt= new MyTask(ip,port,kitchen);
+                        mt.execute();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     btnKitchen.setBackgroundColor(Color.parseColor("#FBFF5E"));
-                    btnKitchen.setText("KITCHEN                        TURN OFF");
+                    btnKitchen.setText("KITCHEN                          TURN OFF");
                     kitchen=false;
                 }
                 else {
+                    Intent intent = getIntent();
+                    String ip = intent.getStringExtra("ip");
+                    String port = intent.getStringExtra("port");
+                    mt= new MyTask(ip,port,kitchen);
+                    mt.execute();
                     btnKitchen.setBackgroundColor(Color.TRANSPARENT);
-                    btnKitchen.setText("KITCHEN                        TURN ON");
+                    btnKitchen.setText("KITCHEN                          TURN ON");
                     kitchen=true;
                 }
                 break;
@@ -97,12 +110,12 @@ public class Light extends AppCompatActivity implements View.OnClickListener {
             case R.id.btnBed:
                 if (bed) {
                     btnBed.setBackgroundColor(Color.parseColor("#FBFF5E"));
-                    btnBed.setText("BED ROOM                          TURN OFF");
+                    btnBed.setText("BED ROOM                            TURN OFF");
                     bed=false;
                 }
                 else {
                     btnBed.setBackgroundColor(Color.TRANSPARENT);
-                    btnBed.setText("BED ROOM                          TURN ON");
+                    btnBed.setText("BED ROOM                            TURN ON");
                     bed=true;
                 }
                 break;
@@ -121,12 +134,12 @@ public class Light extends AppCompatActivity implements View.OnClickListener {
             case R.id.btnKor:
                 if (kor) {
                     btnKor.setBackgroundColor(Color.parseColor("#FBFF5E"));
-                    btnKor.setText("KORRIDOR                        TURN OFF");
+                    btnKor.setText("KORRIDOR                          TURN OFF");
                     kor=false;
                 }
                 else {
                     btnKor.setBackgroundColor(Color.TRANSPARENT);
-                    btnKor.setText("KORRIDOR                        TURN ON");
+                    btnKor.setText("KORRIDOR                          TURN ON");
                     kor=true;
                 }
                 break;

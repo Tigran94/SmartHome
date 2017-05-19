@@ -9,4 +9,35 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.tiko.smarthome.Config">
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textCapCharacters|number"
+        android:ems="10"
+        android:layout_marginTop="7dp"
+        android:id="@+id/editTextIp"
+        android:hint="Please enter ip "
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/buttonEnter"></EditText>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/editTextIp"
+        android:layout_toStartOf="@+id/buttonEnter"
+        android:id="@+id/editTextPort"
+        android:hint="Please enter port" />
+
+    <Button
+        android:text="Enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonEnter"
+        android:layout_marginEnd="10dp"
+        android:layout_alignBottom="@+id/editTextPort"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="6dp" />
+
 </RelativeLayout>

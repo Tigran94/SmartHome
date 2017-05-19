@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCurtain.startAnimation(anim);
         btnExit.startAnimation(anim);
         btnSofa.startAnimation(anim);
+
     }
 
     @Override

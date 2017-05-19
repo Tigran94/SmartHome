@@ -25,16 +25,16 @@
 
     <Button
         android:layout_width="99dp"
-        android:layout_height="263dp"
+        android:layout_height="291dp"
         android:text="KITCHEN          TURN ON"
         android:id="@+id/btnKitchen"
         android:background="@android:color/transparent"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="83dp"
         android:layout_marginLeft="4dp"/>
 
     <Button
         android:layout_width="104dp"
-        android:layout_height="263dp"
+        android:layout_height="291dp"
         android:text="DINING ROOM   TURN ON"
         android:id="@+id/btnDining"
         android:background="@android:color/transparent"
@@ -43,7 +43,7 @@
 
     <Button
         android:layout_width="109dp"
-        android:layout_height="377dp"
+        android:layout_height="418dp"
         android:text="BED ROOM       TURN ON"
         android:id="@+id/btnBed"
         android:background="@android:color/transparent"
@@ -52,17 +52,17 @@
 
     <Button
         android:layout_width="99dp"
-        android:layout_height="111dp"
+        android:layout_height="122dp"
         android:text="BATHROOM     TURN ON"
         android:id="@+id/btnBath"
         android:background="@android:color/transparent"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="4dp"
-        android:layout_marginBottom="27dp" />
+        android:layout_marginBottom="32dp" />
 
     <Button
         android:layout_width="104dp"
-        android:layout_height="111dp"
+        android:layout_height="122dp"
         android:text="KORRIDOR     TURN ON"
         android:id="@+id/btnKor"
         android:background="@android:color/transparent"

@@ -16,52 +16,52 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="164dp"
-        android:layout_height="147dp"
+        android:layout_width="177dp"
+        android:layout_height="150dp"
         android:background="@android:color/transparent"
-        android:text="KITCHEN                     TURN ON"
+        android:text="KITCHEN                          TURN ON"
         android:id="@+id/btnKitchen"
-        android:layout_marginLeft="34dp"
+        android:layout_marginLeft="35dp"
         android:layout_marginTop="52dp" />
 
     <Button
-        android:layout_width="173dp"
-        android:layout_height="147dp"
+        android:layout_width="186dp"
+        android:layout_height="150dp"
         android:background="@android:color/transparent"
-        android:text="DINING ROOM                 TURN ON"
+        android:text="DINING ROOM                   TURN ON"
         android:id="@+id/btnDining"
         android:layout_alignTop="@+id/btnKitchen"
-        android:layout_marginLeft="201dp"
+        android:layout_marginLeft="214dp"
         />
 
     <Button
-        android:layout_width="182dp"
-        android:layout_height="211dp"
+        android:layout_width="196dp"
+        android:layout_height="216dp"
         android:background="@android:color/transparent"
-        android:text="BED ROOM                      TURN ON"
+        android:text="BED ROOM                            TURN ON"
         android:id="@+id/btnBed"
         android:layout_alignTop="@+id/btnDining"
-        android:layout_marginLeft="376dp" />
+        android:layout_marginLeft="402dp" />
 
     <Button
-        android:layout_width="164dp"
-        android:layout_height="62dp"
+        android:layout_width="176dp"
+        android:layout_height="63dp"
         android:background="@android:color/transparent"
-        android:text="BATHROOM               TURN ON"
+        android:text="BATHROOM                    TURN ON"
         android:id="@+id/btnBath"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="25dp"
-        android:layout_marginLeft="34dp"
+        android:layout_marginLeft="36dp"
         />
 
     <Button
-        android:layout_width="173dp"
-        android:layout_height="62dp"
+        android:layout_width="186dp"
+        android:layout_height="63dp"
         android:background="@android:color/transparent"
-        android:text="KORRIDOR                       TURN ON"
+        android:text="KORRIDOR                            TURN ON"
         android:id="@+id/btnKor"
         android:layout_alignTop="@+id/btnBath"
-        android:layout_marginLeft="201dp"
+        android:layout_marginLeft="214dp"
 
         />
 
